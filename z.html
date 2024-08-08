@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url('static/bbb.jpg');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .yn {
+            width: 300px;
+            background-color: rgb(199, 248, 251);
+
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .yn label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .yn input[type="text"],
+        .yn input[type="password"] {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .yn input[type="submit"] {
+            width: calc(50% - 5px);
+            padding: 10px;
+            border: none;
+            background-color: #2e348b;
+            color: #ffffff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yn input[type="submit"]:first-child {
+            margin-right: 20px; /* Added margin between buttons */
+        }
+        
+    </style>
+</head>
+<body >
+    
+    <div class="c">
+    <div class="yn">
+        <form action="/submit" method="POST">
+   <label for="user">User::</label> 
+   <input type="text" id="user" maxlength="20" name="user" >
+    <br>
+    <br>
+    <label for="password">Password::</label><input type="number" id="password" maxlength="10" name="password">
+    <br>
+    <br>
+    <input type="submit" name="submit_button" value="LOG IN">
+    <input type="submit" name="submit_button" value="SIGN UP">
+</form>   
+</div>
+</div>
+</body>
+</html>

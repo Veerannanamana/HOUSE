@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('static/z.avif');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            text-align: center;
+            color: black; /* Set text color to contrast with the background */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 24px;
+        }
+
+        input {
+            width: 80%;
+            max-width: 400px; /* Limit input width for better readability */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>House Price Prediction</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="room">Enter the number of rooms:</label>
+                <input type="number" id="room" name="room" placeholder="Enter bedrooms">
+            </div>
+            <div class="form-group">
+                <label for="b">Enter the area of the house excluding basement (in sq.ft):</label>
+                <input type="number" id="b" name="b"placeholder="size of area">
+            </div>
+            <div class="form-group">
+                <label for="c">Enter the area of the basement(in sq.ft):</label>
+                <input type="number" id="c" name="c" placeholder="size of area">
+            </div>
+            <div class="form-group">
+                <label for="d">Enter the facing direction (1 for north, 2 for south, 3 for east, 4 for west):</label>
+                <input type="text" id="d" name="d" placeholder="Enter face..">
+                <br>
+                <br>
+                <button type="submit">Predict Price</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
